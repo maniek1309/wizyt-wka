@@ -42,7 +42,7 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
+    //console.log("helo");
 
     topLink.classList.add("show-link");
   } else {
@@ -81,4 +81,35 @@ scrollLinks.forEach((link) => {
     linksContainer.style.height = 0;
   });
 });
-// calculate heights
+// ********** email ************
+const btn = document.getElementById("email-btn");
+const eparagraph = document.querySelector(".email-paragraph");
+const email_element = document.querySelector(".email"); // Poprawiony selektor
+const email = "m.swiatlo@interia.pl";
+
+btn.addEventListener("click", function (e) {
+  if (email_element.classList.contains("hidden")) { // Użyj .classList.contains
+    btn.textContent = "Kliknij aby ukryć email";
+    email_element.classList.remove("hidden"); // Usuń klasę "hidden", aby odkryć element
+  } else {
+    btn.textContent = "Kliknij aby pokazać email";
+    email_element.classList.add("hidden"); // Dodaj klasę "hidden", aby ukryć element
+  }
+});
+// ********** linki do stron ************
+const linki = document.querySelectorAll(".btn-linki");
+
+linki.forEach(function(link) {
+  link.addEventListener("click", function (e) {
+    // Sprawdź, czy odnośnik ma atrybut href
+    if (link.hasAttribute("href")) {
+      const adresURL = link.getAttribute("href");
+      console.log(adresURL);
+      
+      // Opcjonalnie: Przeprowadź przekierowanie na klikniętą stronę
+      window.open(adresURL, "_blank");
+    } else {
+      console.log("Ten odnośnik nie ma atrybutu href.");
+    }
+  });
+});
