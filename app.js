@@ -1,8 +1,3 @@
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
-
 // ********** set date ************
 // select span
 const date = document.getElementById("date");
@@ -69,7 +64,7 @@ scrollLinks.forEach((link) => {
     if (!fixedNav) {
       position = position - navHeight;
     }
-    if (navHeight > 82) {
+    if (navHeight > 90) {
       position = position + containerHeight;
     }
 
@@ -104,9 +99,6 @@ linki.forEach(function(link) {
     // Sprawdź, czy odnośnik ma atrybut href
     if (link.hasAttribute("href")) {
       const adresURL = link.getAttribute("href");
-      console.log(adresURL);
-      
-      // Opcjonalnie: Przeprowadź przekierowanie na klikniętą stronę
       window.open(adresURL, "_blank");
     } else {
       console.log("Ten odnośnik nie ma atrybutu href.");

@@ -112,7 +112,8 @@ h4 {
   font-size: 0.875rem;
 }
 p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   color: var(--clr-grey-5);
 }
 @media screen and (min-width: 800px) {
@@ -171,6 +172,7 @@ p {
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
+  margin: 1.5rem;
 }
 .btn-linki:hover {
   color: var(--clr-white);
@@ -231,9 +233,6 @@ nav {
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
-/* .fixed-nav .links-container {
-  height: auto !important;
-} */
 .nav-header {
   display: flex;
   align-items: center;
@@ -358,7 +357,7 @@ header {
 #o_mnie,
 #moje_projekty,
 #kontakt {
-  height: 80vh;
+  height: auto !important;
 }
 #moje_projekty {
   background: var(--clr-white);
@@ -412,4 +411,8 @@ footer p {
 }
 .email{
   visibility: visible;
+}
+.projekty{
+  display: ruby-base-container;
+  margin: 0.1rem;
 }
